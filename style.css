@@ -1,0 +1,254 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: hsl(229, 57%, 11%) url('images/bg-mobile.png') no-repeat;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    justify-content: center;
+    padding: 25px;
+}
+
+/* ########## Upload Container ########## */
+.upload-container {
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 100px 10px 10px;
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.upload-content {
+    overflow: auto;
+    padding: 40px;
+}
+
+img {
+    margin: 0 0 29px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+.button-style {
+    background-color: hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    border-radius: 10px;
+    height: 47px;
+    width: 47px;
+}
+
+.button1 {
+    background-image: url('images/icon-document.svg');
+}
+
+.button2 {
+    background-image: url('images/icon-folder.svg');
+    margin: 0 18px;
+}
+
+.button3 {
+    background-image: url('images/icon-upload.svg');
+}
+
+/* ########## Storage Container ########## */
+.storage-container {
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.storage-header {
+    color: #fff;
+    line-height: 1.0em;
+    margin: 0 0 14px 0;
+    text-align: center;
+}
+
+.storage-content {
+    overflow: auto;
+    padding: 34px 35px 52px;
+}
+
+.p-min-value {
+    color: #fff;
+    float: left;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.p-max-value {
+    color: #fff;
+    float: right;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.gauge-container {
+    background: hsl(229, 57%, 11%, 0.5);
+    border: none;
+    border-radius: 30px;
+    height: 15px;
+    margin-bottom: 7px;
+    padding: 3px;
+    position: relative;
+    width: 100%;
+}
+
+.gauge-fill {
+    background: linear-gradient(to left, hsl(335, 100%, 65%), hsl(6, 100%, 80%));
+    border-radius: 30px;
+    height: 100%;
+    position: relative;
+    width: 75%;
+}
+
+.gauge-fill::after {
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    bottom: 3px;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: 3px;
+    width: 0;
+}
+
+#alert {
+    background: #fff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    width: 179px;
+    height: 72px;
+    left: 50%; 
+    margin-left: -89px;
+    position: absolute;
+    top: 122px;
+}
+
+.alert-text {
+    color: grey;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 5px; 
+}
+
+.alert-value {
+    color: #000;
+    font-size: 2.3125rem;
+    font-weight: 700;
+}
+
+/* ########## Frontend Mentor Attribution ########## */
+.attribution {
+    color: hsl(0, 0%, 91%);
+    font-size: 0.625rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(231, 63%, 60%);
+}
+
+/* ########## Media Queries ########## */
+@media (min-width: 376px), (min-height: 668px) {
+    body {
+        background: hsl(229, 57%, 11%) url('images/bg-desktop.png') no-repeat center bottom;
+    }
+
+    .upload-container, .storage-container {
+        margin: 0 auto 16px auto;
+        max-width: 350px;
+    }
+}
+
+@media (min-width: 976px) {
+    body {
+        background: hsl(229, 57%, 11%) url('images/bg-desktop.png') no-repeat left 0 bottom -12px;
+
+    }
+    
+    .container {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: space-between;
+        margin: 20% auto;
+        max-width: 920px;
+        padding: 0;
+    }  
+    
+    .upload-container {
+        margin: 0;
+    }
+
+    img {
+        margin: 0 0 35px;
+    }
+
+    .storage-container {
+        height: 154px;
+        margin: 0;
+        max-width: 540px;
+    }
+
+    .storage-content {
+        padding: 40px;
+    }
+
+    .storage-header {
+        margin: 0 0 15px 0;
+        text-align: left;
+    }
+
+    #alert {
+        bottom: 0;
+        left: 321px;
+        margin-left: 0px;
+        position: absolute;
+        top: -47px;
+    }
+    
+    #alert::before {
+        border-top: 10px solid #fff;
+        border-right: 28px solid #fff;
+        border-bottom: 28px solid transparent;
+        content: "";
+        height: 0;
+        left: 151px;
+        position: absolute;
+        top: 57px;
+        width: 0;
+    }
+}
+
+
+
