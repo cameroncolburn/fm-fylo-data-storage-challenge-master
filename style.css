@@ -106,7 +106,7 @@ li {
 }
 
 .gauge-container {
-    background: hsl(229, 57%, 11%, 0.5);
+    background: hsla(229, 57%, 11%, 0.5);
     border: none;
     border-radius: 30px;
     height: 15px;
@@ -140,8 +140,6 @@ li {
 
 #alert {
     background: #fff;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     width: 179px;
     height: 72px;
@@ -180,7 +178,11 @@ li {
 /* ########## Media Queries ########## */
 @media (min-width: 376px), (min-height: 668px) {
     body {
-        background: hsl(229, 57%, 11%) url('images/bg-desktop.png') no-repeat center bottom;
+        background: hsl(229, 57%, 11%) url('images/bg-desktop.png') repeat 25% 0;
+    }
+
+    .container {
+        min-height: 470px;
     }
 
     .upload-container, .storage-container {
@@ -203,6 +205,7 @@ li {
         justify-content: space-between;
         margin: 20% auto;
         max-width: 920px;
+        min-height: unset;
         padding: 0;
     }  
     
